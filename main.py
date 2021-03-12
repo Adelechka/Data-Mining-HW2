@@ -16,6 +16,7 @@ PASSWORD = 'qwerty007'
 HOST = 'database-hw2.c4mika4kztfi.us-east-1.rds.amazonaws.com'
 PORT = '5432'
 
+
 def get_items(vk_connection):
     return vk_connection.wall.get(domain=DOMAIN, count=100, offset=OFFSET).get('items')
 
