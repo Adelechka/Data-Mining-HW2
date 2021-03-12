@@ -46,6 +46,7 @@ def save_to_database(counter):
         values = list(counter.values())
         for k in range(100):
             value = (keys[k], values[k])
+            print(value)
             insert = sql.SQL('INSERT INTO stat (word, count) VALUES ({})').format(
                 sql.SQL(',').join(map(sql.Literal, value))
             )
