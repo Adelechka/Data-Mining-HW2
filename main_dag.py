@@ -2,10 +2,6 @@ from datetime import datetime
 from os import system
 
 from airflow import DAG
-import main
-
-from airflow.operators.python import PythonOperator
-from airflow.utils.dates import days_ago
 
 default_args = {
     'owner': 'admin',
