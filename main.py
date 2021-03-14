@@ -61,7 +61,7 @@ def save_to_database(counter):
     conn.close()
 
 
-def main():
+async def main():
     COUNTER = {}
     OFFSET = 0
     print('Analysis started')

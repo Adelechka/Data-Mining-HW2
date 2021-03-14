@@ -13,9 +13,9 @@ args = {
     'depends_on_past': False,
 }
 
-with DAG(dag_id='main_day', default_args=args, schedule_interval=None) as dag:
+with DAG(dag_id='main_dag', default_args=args, schedule_interval=None) as dag:
     parse_vk_wall = PythonOperator(
-        task_id='download_titanic_dataset',
+        task_id='count_words',
         python_callable=main,
         dag=dag
     )
